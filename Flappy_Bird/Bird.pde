@@ -1,31 +1,31 @@
 
-//Class object
+//Class Objekt
 
 class Bird{
   float gravity;
   float velocity;
-  float xpos;
-  float ypos;
+  float x_pos;
+  float y_pos;
   float bounce;
 
 //constructor
   Bird(){
     gravity = 0.4;
     velocity = 10;
-    xpos = 100;
-    ypos = height/2-55;
+    x_pos = 100;
+    y_pos = height/2-55;
     bounce = -1;
   }
 
   
-  //just the bird appearing
+  //Anzeigen des Vogels
   void show() {
     fill(0);
     rect(xpos,ypos,55,55);
   }
   
   
-  //falling
+  //Fallen
   void move(){
     /*if(ypos < height-55){
       ypos = ypos  +10;
@@ -33,13 +33,13 @@ class Bird{
       ypos = height -55;
     }*/
     velocity += gravity;
-    ypos += velocity;
+    y_pos += velocity;
   }
   
   
-  // on keypress jump i nthe air
+  //Springen
   void jump(){
-    if(ypos > height - 55){
+    if(y_pos > height - 55){
     velocity *= bounce;
     }
   }
