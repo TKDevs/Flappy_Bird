@@ -37,7 +37,7 @@ class Bird{
   
   //Springen
   void jump(){
-    velocity = -12;
+    velocity = -8;
   }
   
   void reset() {

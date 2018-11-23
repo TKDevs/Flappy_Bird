@@ -1,9 +1,16 @@
 Bird flappy;
+Obstacle[] obstacles = new Obstacle[1];
 int top = 110;
 
 void setup() {
   size(1200, 600);
   flappy = new Bird(55);
+  //------------------------------------------------------------------------------
+  
+  for (int i = 0;i < obstacles.length; i++){
+    obstacles[i] = new Obstacle();
+  }
+  //------------------------------------------------------------------------------
   smooth();
   frameRate(60);
 }
@@ -16,6 +23,11 @@ void draw(){
   //mpf(Methoden per Frame) der Objekte
   flappy.show();
   flappy.move();
+  
+  for(Obstacle o: obstacles) {
+    o.show();
+    o.move();
+  }
   //Obstacles move / show
   //------------------------------------------------------------------------------
   //Todesursachen
