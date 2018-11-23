@@ -1,0 +1,38 @@
+class Obstacle {
+  float ky_top; //Y Wert für Höhe über dem Bildschirm 
+  float kwidth;
+  float kgap_size;
+  float kspeed;
+
+  float gap_y;
+  float gap_length;
+  float x;
+  
+  float some_value = 0;  //Variablenwerte die auf some_value gesetzt 
+                         //werden müssen noch genauer bestimmt werden
+
+  Obstacle() {
+    ky_top = 110;
+    kwidth = 60;
+    kgap_size = 130;
+    kspeed = 4;
+    changeObstacle();
+  }
+
+  void move() {
+    x -= kspeed;
+  }
+
+  void show() {
+    fill(0);
+    rect(x, 0 - ky_top, kwidth, gap_length);  //oberes Rechteck
+    rect(x, gap_y + kgap_size, kwidth, height);  //unteres Rechteck
+  }
+  //------------------------------------------------------------------------------
+  //TEST
+  void changeObstacle() {
+    gap_y = some_value;
+    gap_length = gap_y + ky_top;
+    x = some_value;
+  }
+}
