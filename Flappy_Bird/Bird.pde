@@ -6,42 +6,44 @@ class Bird{
   float velocity;
   float x_pos;
   float y_pos;
-  float bounce;
+  float size; //Objektgröße
+  boolean alive;
 
 //constructor
-  Bird(){
-    gravity = 0.4;
-    velocity = 10;
+  Bird(float size_){
+    size = size_;
     x_pos = 100;
-    y_pos = height/2-55;
-    bounce = -1;
+    gravity = 0.4;
+    reset();
   }
 
   
   //Anzeigen des Vogels
   void show() {
     fill(0);
-    rect(x_pos,y_pos,55,55);
+    rect(x_pos,y_pos,size,size);
+    if(alive == false) {y_pos = height - size;}
   }
   
   
   //Fallen
   void move(){
-    /*if(ypos < height-55){
-      ypos = ypos  +10;
-    }else{
-      ypos = height -55;
-    }*/
-    velocity += gravity;
-    y_pos += velocity;
+    if(alive == true){
+      velocity += gravity;
+      y_pos += velocity;
+    }
   }
   
   
   //Springen
   void jump(){
-    if(y_pos > height - 55){
-    velocity *= bounce;
-    }
+    velocity = -12;
+  }
+  
+  void reset() {
+    velocity = 0;
+    y_pos = height/2-size;
+    alive = true;
   }
   
 }

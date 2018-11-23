@@ -3,7 +3,7 @@ Terms
 
   Alle Kommentare auf Deutsch
   
-  Klassen-, Methoden-, Variablen-, Objektnamen englisch
+  Klassen-, Methoden-, Variablennamen englisch
   
   Klassennamen beginnen mit einem Großbuchstaben und bestehen aus einem Wort        //Beispiel: Player
   
@@ -16,8 +16,6 @@ Terms
   
   Variablen die als Parameter übergeben werden, werden in der Methode
   mit einem Unterstrich am Ende gekennzeichnet                                      //Beispiel: width_
-  
-  Objektnamen werden ausschließlich mit Kleinbuchstaben geschrieben                 //Beispiel: Bird flappy
   
   verwendete Abkürzungen in Klassen-, Methoden- und Variablennamen
   werden mit einem kurzen Kommentar direkt nach der Definition erklärt
