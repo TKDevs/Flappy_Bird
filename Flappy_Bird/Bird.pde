@@ -21,7 +21,7 @@ class Bird{
   //Anzeigen des Vogels
   void show() {
     fill(0);
-    rect(xpos,ypos,55,55);
+    rect(x_pos,y_pos,55,55);
   }
   
   
