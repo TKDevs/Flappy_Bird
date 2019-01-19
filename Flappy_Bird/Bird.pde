@@ -1,6 +1,6 @@
 
 //Class Objekt
-
+efsfsd
 class Bird{
   float gravity;
   float velocity;
